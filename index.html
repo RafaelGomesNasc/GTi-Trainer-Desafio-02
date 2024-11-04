@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokédex</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="layout">
+        <nav id="sidebar">
+            <div class="sidebar-title">
+                <span class="sidebar-item">Pokemon</span>
+            </div>
+            <div class="sidebar-menu">
+                <a class="sidebar-item active" href="index.html">
+                    <img src="images/icons/pokedex-icon.svg" alt="Pokedex">
+                    <span>Pokédex</span>
+                </a>
+                <a class="sidebar-item" href="team.html">
+                    <img src="images/icons/time-icon.svg" alt="Time">
+                    <span>Time</span>
+                </a>
+            </div>
+            <div class="sidebar-footer">
+                <span>Copyright &copy; Pokedex</span>
+            </div>
+        </nav>
+        <div id="main-container">
+            <input type="text" id="search-bar" placeholder="Buscar Pokémon" oninput="filterPokemon()">
+            <div id="pokemon-container"></div>
+
+            <!-- Modal para nomear o time -->
+            <div id="team-modal" class="modal" style="display: none;">
+                <div class="modal-content">
+                    <h2>Escolha o nome do seu time</h2>
+                    <input type="text" id="team-name" placeholder="Nome do time">
+                    <button onclick="savePokemonToTeam()">Salvar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
